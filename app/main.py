@@ -17,5 +17,6 @@ def root():
     return {"hello world": b}
 
 
-if __name__ == "__main__":
-    uvicorn.run("main:app", host="127.0.0.1", port=os.environ.get("PORT", 8080))
+# Run $ uvicorn app.main:app --reload --port 8080
+# if __name__ == "__main__":
+#     uvicorn.run("main:app", host="0.0.0.0", port=os.environ.get("PORT", 8080))
