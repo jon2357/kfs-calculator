@@ -3,7 +3,6 @@ import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
-from .kfs import calculator
 from . import kfs_router
 
 app = FastAPI()
@@ -19,4 +18,4 @@ def root():
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=os.environ.get("PORT", 8080))
+    uvicorn.run("main:app", host="127.0.0.1", port=os.environ.get("PORT", 8080))
